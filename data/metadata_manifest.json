@@ -1,0 +1,16 @@
+[
+  {
+    "filename": "india_leave_policy_2024.pdf",
+    "department": "HR",
+    "region": "India",
+    "policy_type": "Leave",
+    "effective_year": 2024
+  },
+  {
+    "filename": "us_expense_policy_2024.pdf",
+    "department": "Finance",
+    "region": "US",
+    "policy_type": "Expense",
+    "effective_year": 2024
+  }
+]

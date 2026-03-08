@@ -1,7 +1,7 @@
 from langchain_huggingface import HuggingFaceEmbeddings
-from config import EMBED_MODEL
+from src.config import EMBED_MODEL
 
-def get_embeddings_model():
+def get_embedding_model():
     """
     Load and return the embeddings model.
     Use BGE-small which is optimal for the retrieval task.
@@ -16,7 +16,7 @@ def get_embeddings_model():
 
 # test
 if __name__ == "__main__":
-    model = get_embeddings_model()
+    model = get_embedding_model()
     test_text = "What is the leave policy?"
     embedding = model.embed_query(test_text)
     print(f"Embedding shape: {len(embedding)}") # out put as 384 as BGE-small produces 384-dimensional embeddings

@@ -23,5 +23,5 @@ COLLECTION_NAME = "policy_documents"
 EMBED_MODEL = "BAAI/bge-small-en-v1.5"
 
 # LLM
-LLM_MODEL = "gpt-1.5-flash"
+LLM_MODEL = "gemini-2.5-flash"
 LLM_TEMPERATURE = 0.1 # low temperature for more factual responses and less creativity
