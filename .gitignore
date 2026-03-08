@@ -1,12 +1,14 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+
 # Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
-env/
-venv/
-ENV/
 build/
 develop-eggs/
 dist/
@@ -19,20 +21,19 @@ parts/
 sdist/
 var/
 wheels/
+pip-wheel-metadata/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+MANIFEST
 
-# Environment variables
-.env
-.env.local
-
-# Data files
-data/raw/*
-data/processed/*
-data/qdrant_storage/*
-!data/raw/.gitkeep
-!data/processed/.gitkeep
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
 
 # IDE
 .vscode/
@@ -40,23 +41,45 @@ data/qdrant_storage/*
 *.swp
 *.swo
 *~
+.DS_Store
 
-# Jupyter
-.ipynb_checkpoints/
-notebooks/.ipynb_checkpoints/
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# ChromaDB
+chroma_db/
+*.db
+*.sqlite
+*.sqlite3
+
+# Data files (if you don't want to commit large files)
+data/*.pdf
+data/*.docx
+data/*/*.pdf
+data/*/*.docx
+
+# But keep the metadata manifest
+!data/metadat_manifest.json
+!data/metadata_manifest.json
 
 # Logs
-logs/
 *.log
-
-# OS
-.DS_Store
-Thumbs.db
+logs/
 
 # Testing
 .pytest_cache/
 .coverage
 htmlcov/
+.tox/
+
+# Model cache (HuggingFace models can be large)
+.cache/
+models/
 
 # Streamlit
-.streamlit/secrets.toml
+.streamlit/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
